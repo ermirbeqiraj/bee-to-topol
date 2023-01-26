@@ -90,6 +90,36 @@ export interface Module {
     uuid: string;
 }
 
+export interface ButtonModule extends Module {
+    type: "mailup-bee-newsletter-modules-button",
+    descriptor: Descriptor & {
+        button: {
+            "href": string;
+            "label": string;
+            "style": {
+                "background-color": string;
+                "border-bottom": string;
+                "border-left": string;
+                "border-radius": string;
+                "border-right": string;
+                "border-top": string;
+                "color": string;
+                "direction": string;
+                "font-family": string;
+                "font-size": string;
+                "line-height": string;
+                "max-width": string;
+                "padding-bottom": string;
+                "padding-left": string;
+                "padding-right": string;
+                "padding-top": string;
+                "width": string;
+                "font-weight": string;
+            };
+        }
+    }
+}
+
 
 export interface Column {
     "grid-columns": number;
@@ -125,6 +155,7 @@ export interface Row {
             rowColStackOnMobile: boolean;
         };
         style: {
+            "background-size"?: string;
             "background-color": string;
             "background-image": string;
             "background-position": string;
